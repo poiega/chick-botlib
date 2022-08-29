@@ -7,15 +7,15 @@ require('tls').DEFAULT_MIN_VERSION = 'TLSv1';
 const chika = {
     // 실행 시마다 자동으로 가져오는 방식으로 변경됨
     // 아래 값은 무효
-    namuwiki:    '9fe579274e586b950',
-    alphawiki:   '903e1a140dbcd2df8',
-    theseedwiki: '9ba957530204bbf25'
+    gogowiki:    '9fe579274e586b950',
+    purplewiki:   '903e1a140dbcd2df8',
+    roadwiki: '9ba957530204bbf25'
 };
 
 const hosts = {
-    namuwiki:    'namu.wiki',
-    alphawiki:   'awiki.theseed.io',
-    theseedwiki: 'theseed.io'
+    gogowiki:    'go2021.run-us-west2.goorm.io',
+    purplewiki:   'puwiki.ga',
+    roadwiki: 'broad-butternut-punch.glitch.me'
 };
 
 if(typeof(Array.prototype.includes) !== 'function') {
@@ -30,7 +30,7 @@ if(typeof(Array.prototype.includes) !== 'function') {
 
 var onReadyCallback = null;
 
-var userAgent = "Mozilla/5.0 (Windows NT 5.1; rv:68.9) Gecko/20100101 Goanna/4.6 Firefox/68.9 Mypal/28.12.0";
+var userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edge/100.0.1185.29";
 var pinPrompt = 'PIN: ';
 
 function theseedRequest(wikiname, host, path, cookie, noInternal) {
@@ -79,7 +79,7 @@ function theseedPost(wikiname, host, path, jdata, cookie, returnRes, noInternal)
                 'X-Chika': chika[wikiname],
                 'Cookie': cookie,
                 'Content-Type': 'application/json',
-                "User-Agent": "Mozilla/5.0 (Windows NT 5.1; rv:68.9) Gecko/20100101 Goanna/4.6 Firefox/68.9 Mypal/28.12.0"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edg/100.0.1185.29"
             },
             method: 'POST'
         }, function(res) {
